@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.About>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+	var MediaPicker = Model.Value<IPublishedContent>("linkImage");
+	var selection = Model.Root().Children.Where(x => x.IsVisible()).ToArray();
+}
+<section class="about-section text-center" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-white mb-4">@Model.PageTitle</h2>
+                <p class="text-white-50">
+                    @Model.PageDescription
+                </p>
+            </div>
+            <h2 class="text-white">PROJECTS<h2>
+        </div>
+        @if(MediaPicker != null){
+            <a href="@selection[1].Url"><img class="img-fluid" src="@MediaPicker.Url" alt="..." title="@MediaPicker.Url"/></a>
+        }
+    </div>
+</section>

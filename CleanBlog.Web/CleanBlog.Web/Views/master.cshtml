@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ClientDependency.Core.Mvc
+@{
+    Layout = null;
+    Html.RequiresCss("https://fonts.googleapis.com/css?family=Varela+Round", new {
+        rel = "stylesheet"
+    });
+    Html.RequiresCss("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i", new {
+        rel = "stylesheet"
+    });
+    Html.RequiresCss("/css/styles.css", new
+    {
+        rel = "stylesheet"
+    });
+    Html.RequiresCss("assets/favicon.ico", new
+    {
+        rel = "icon",
+        type = "image/x-icon"
+    });
+
+    Html.RequiresJs("https://use.fontawesome.com/releases/v6.1.0/js/all.js", new {
+        crossorigin = "anonymous"
+
+    });
+    Html.RequiresJs("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js");
+    Html.RequiresJs("/js/scripts.js");
+    Html.RequiresJs("https://cdn.startbootstrap.com/sb-forms-latest.js");
+}
+
+<!DOCTYPE html>
+    @Html.RenderCssHere()
+<html lang="en">
+    @Html.Partial("Navigation/Header")
+<body id="page-top">
+    <!-- Navigation-->
+    @Html.Partial("Navigation/Navigation")
+    <!-- Masthead-->
+    @RenderBody()
+    <!-- Footer-->
+    @Html.Partial("Navigation/Footer")
+    @Html.RenderJsHere()
+</body>
+</html>
