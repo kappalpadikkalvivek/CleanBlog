@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d28a6dfc4b6f37cb")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.7")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c0c49ced199824d7")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.8")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -198,11 +198,32 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Project Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("projectDescription")]
+		public string ProjectDescription => this.Value<string>("projectDescription");
+
+		///<summary>
+		/// Project Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("projectImage")]
+		public IPublishedContent ProjectImage => this.Value<IPublishedContent>("projectImage");
+
+		///<summary>
 		/// Project Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("projectName")]
 		public string ProjectName => this.Value<string>("projectName");
+
+		///<summary>
+		/// Toggle Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("toggleButton")]
+		public bool ToggleButton => this.Value<bool>("toggleButton");
 	}
 
 	/// <summary>Contact</summary>
