@@ -237,5 +237,4 @@ C:\Users\MY PC\OneDrive\Documents\My project\CleanBlog\CleanBlog.Web\CleanBlog.W
 C:\Users\MY PC\OneDrive\Documents\My project\CleanBlog\CleanBlog.Web\CleanBlog.Web\obj\Debug\CleanBlog.Web.csproj.CoreCompileInputs.cache
 C:\Users\MY PC\OneDrive\Documents\My project\CleanBlog\CleanBlog.Web\CleanBlog.Web\obj\Debug\CleanBlog.Web.dll
 C:\Users\MY PC\OneDrive\Documents\My project\CleanBlog\CleanBlog.Web\CleanBlog.Web\obj\Debug\CleanBlog.Web.pdb
-C:\Users\MY PC\OneDrive\Documents\My project\CleanBlog\CleanBlog.Web\CleanBlog.Web\obj\Debug\CleanBlog.Web.csproj.CopyComplete
 C:\Users\MY PC\OneDrive\Documents\My project\CleanBlog\CleanBlog.Web\CleanBlog.Web\obj\Debug\CleanBlog.Web.csproj.AssemblyReference.cache

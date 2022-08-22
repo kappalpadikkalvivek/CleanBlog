@@ -1,9 +1,14 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.About>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "master.cshtml";
-	var MediaPicker = Model.Value<IPublishedContent>("linkImage");
-	var selection = Model.Root().Children.Where(x => x.IsVisible()).ToArray();
+    Layout = "master.cshtml";
+    var Image = Model.Value<IPublishedContent>("linkImage");
+    var selection = Model.Root().Children.Where(x => x.IsVisible()).ToArray();
+    String ImageUrl = "";
+    if(Image != null)
+    {
+        ImageUrl = Image.GetCropUrl(width : 100, height : 100);
+    }
 }
 <section class="about-section text-center" id="about">
     <div class="container px-4 px-lg-5">
@@ -16,8 +21,8 @@
             </div>
             <h2 class="text-white">PROJECTS<h2>
         </div>
-        @if(MediaPicker != null){
-            <a href="@selection[1].Url"><img class="img-fluid" src="@MediaPicker.Url" alt="..." title="@MediaPicker.Url"/></a>
+        @if(Image != null){
+            <a href="@selection[1].Url"><img class="img-fluid" src="@ImageUrl" alt="..." title="@ImageUrl"/></a>
         }
     </div>
 </section>
